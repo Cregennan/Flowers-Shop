@@ -25,7 +25,6 @@ Route::get('/shops', function(){
     return view('pages.shops');
 });
 
-
 Route::get('/flowers/{flower}', [\App\Http\Controllers\FlowerController::class, 'show']);
 
 Route::get('/flowers', [\App\Http\Controllers\FlowerController::class, 'index']);

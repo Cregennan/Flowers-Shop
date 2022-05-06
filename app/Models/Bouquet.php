@@ -19,6 +19,16 @@ class Bouquet extends Model
         ];
 
     protected $casts = [
-        'flowers' => BouquetFlowersCast::class,
+        'flowers' => 'array'
     ];
+
+    public function getFlowers(){
+        return array_map(function ($id, $number){
+            $t = new \stdClass();
+            $t->flower = Flower::find($id);
+            $t->number = $number;
+            return $t;
+        }, array_keys($this->flowers), array_values($this->flowers));
+    }
+
 }

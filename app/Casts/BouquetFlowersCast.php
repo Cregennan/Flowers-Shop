@@ -15,9 +15,10 @@ class BouquetFlowersCast implements \Illuminate\Contracts\Database\Eloquent\Cast
     {
         /** @var array $ids */
         $ids = json_decode($value, true);
-        $objects = array_map(function ($id){
-            return Flower::find($id);
-        },$ids);
+        $objects = array_map(function ($id, $number){
+            return [Flower::find($id), $number];
+        }, array_keys($ids), array_values($ids));
+
         var_dump($objects);
         return $objects;
     }
@@ -27,9 +28,9 @@ class BouquetFlowersCast implements \Illuminate\Contracts\Database\Eloquent\Cast
      */
     public function set($model, string $key, $value, array $attributes)
     {
-        $ids = array_map(function(Flower $flower){
-            return $flower->id;
-        }, $value);
+        $ids = array_map(function(Flower $flower, int $number){
+            return [$flower->id, $number];
+        }, array_keys($value), array_values($value));
         return json_encode($ids);
     }
 }
