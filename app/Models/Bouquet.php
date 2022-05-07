@@ -15,7 +15,8 @@ class Bouquet extends Model
         'name',
         'picture',
         'description',
-        'picture'
+        'picture',
+        'price'
         ];
 
     protected $casts = [

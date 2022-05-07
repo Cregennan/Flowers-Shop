@@ -11,16 +11,8 @@
         </p>
     </div>
 
-    <div class="right_box">
-        <div class="title"><span class="title_icon"><img src="/images/bullet3.gif" width="25" height="25"alt="" title="" /></span>Категории</div>
-        <ul class="list">
-            <li><a href="#">букеты</a></li>
-            <li><a href="#">композиции с фруктами</a></li>
-            <li><a href="#">коробочки с макарунами</a></li>
-            <li><a href="#">оптовые заказы</a></li>
-            <li><a href="#">дополнительные аксессуары</a></li>
-            <li><a href="#">букет невесты</a></li>
-            <li><a href="#">цветочное оформление торжеств</a></li>
-        </ul>
+    <div class="right_box flex flex-col items-center w-full">
+        <h1 class="mt-5 text-xl font-bold text-gray-700">Не теряйте  время, закажите букет  для себя и любимого человека прямо сейчас!</h1>
+        <a href="/order" class="p-4 bg-green-900 text-gray-100 mt-5 rounded-md">Заказать</a>
     </div>
 </div>

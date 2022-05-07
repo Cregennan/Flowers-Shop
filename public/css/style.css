@@ -61,7 +61,7 @@ p.details {
     height: 27px;
 }
 
-#menu ul li a {
+#menu ul li.nav_link a {
     height: 27px;
     display: block;
     padding: 0px 10px 0 10px;
@@ -75,7 +75,7 @@ p.details {
     line-height: 27px;
 }
 
-#menu ul li.selected a {
+#menu ul li.selected.nav_link a {
     height: 27px;
     display: block;
     padding: 0px 10px 0 10px;
@@ -89,7 +89,7 @@ p.details {
     background-color: #990000;
 }
 
-#menu ul li a:hover {
+#menu ul li.nav_link a:hover {
     background-color: #990000;
 }
 

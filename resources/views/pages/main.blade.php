@@ -9,7 +9,7 @@
     @foreach(\App\Models\Flower::all()->take(3) as $flower)
 
         <div class="feat_prod_box">
-            <div class="prod_img"><a href="/flower/{{$flower->id}}"><img src="{{$flower->picture}}" alt="" title="" border="0" /></a></div>
+            <div class="prod_img"><a href="/flowers/{{$flower->id}}"><img src="{{$flower->picture}}" alt="" title="" border="0" /></a></div>
             <div class="prod_det_box">
                 <div class="box_center">
                     <div class="prod_title">{{$flower->name}}</div>

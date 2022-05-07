@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.header-login-bottom{
+    bottom: 15px;
+}
+
+
+.custom_nav_button a{
+    height: 27px;
+    display: block;
+    padding: 0px 10px 0 10px;
+    margin: 0 4px 0 4px;
+    _margin: 0 2px 0 2px;
+    float: left;
+    text-decoration: none;
+    text-align: center;
+    font-size: 13px;
+    line-height: 27px;
+}
+
+.fullscreen-404{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.fullscreen-404 img{
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+}
