@@ -65,4 +65,9 @@ class OrderController extends Controller
             'order' => $order
         ]);
     }
+
+    public function destroy(Order $order){
+        $order->delete();
+        return Redirect::route('pages.orders');
+    }
 }

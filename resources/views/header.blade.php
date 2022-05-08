@@ -9,7 +9,7 @@
             <li class="@if(\Illuminate\Support\Facades\Route::is('pages.bouquets')) selected @endif nav_link" ><a href="/bouquets">Букеты</a></li>
             <li class="@if(\Illuminate\Support\Facades\Route::is('pages.shops')) selected @endif nav_link" ><a href="/shops">Магазины</a></li>
             <li class="@if(\Illuminate\Support\Facades\Route::is('pages.delivery')) selected @endif nav_link" ><a href="/delivery">Доставка</a></li>
-            <li class="@if(\Illuminate\Support\Facades\Route::is('pages.contact')) selected @endif nav_link" ><a href="/contact">Связь</a></li>
+            <li class="@if(\Illuminate\Support\Facades\Route::is('pages.review')) selected @endif nav_link" ><a href="/review">Отзыв</a></li>
 
             @auth
                 <li class="custom_nav_button"><a class="bg-red-900 text-gray-100" href="/logout">Выйти</a></li>

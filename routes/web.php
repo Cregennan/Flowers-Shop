@@ -21,9 +21,10 @@ Route::get('/shops', function(){
     return view('pages.shops');
 })->name('pages.shops');
 
-Route::get('/contact', function(){
-    return  view('pages.contact');
-})->name('pages.contact');
+Route::get('/review', function(){
+    return  view('pages.review');
+})->name('pages.review');
+
 Route::get('/delivery', function(){
     return view('pages.delivery');
 })->name('pages.delivery');
@@ -45,6 +46,9 @@ Route::get('/flowers', [\App\Http\Controllers\FlowerController::class, 'index'])
 Route::get('/bouquets', [\App\Http\Controllers\BouquetController::class, 'index'])->name('pages.bouquets');
 Route::get('/bouquets/{bouquet}', [\App\Http\Controllers\BouquetController::class,'show'])->name('pages.bouquet');
 
+Route::post('/reviews', [\App\Http\Controllers\ReviewController::class, 'store']);
+
+
 Route::middleware('auth')->group(function(){
 
     Route::get('/bouquet/create', [\App\Http\Controllers\BouquetController::class,'create'])->name('pages.bouquet-make');
@@ -56,6 +60,8 @@ Route::middleware('auth')->group(function(){
     Route::get('/orders/', [\App\Http\Controllers\OrderController::class, 'index'])->name('pages.orders');
     Route::get('/orders/{order}', [\App\Http\Controllers\OrderController::class, 'show'])->name('pages.order');
 
+    Route::get('/bouquets/{bouquet}/delete', [\App\Http\Controllers\BouquetController::class, 'destroy']);
+    Route::get('/orders/{order}/delete', [\App\Http\Controllers\OrderController::class, 'destroy']);
 
     Route::get('/dashboard', function(){
        return  view('pages.dashboard');
