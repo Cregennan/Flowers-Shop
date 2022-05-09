@@ -12,7 +12,7 @@ class MakeUserCommand extends Command
      *
      * @var string
      */
-    protected $signature = 'make:user {name} {login} {password}';
+    protected $signature = 'make:user';
 
     /**
      * The console command description.
@@ -28,7 +28,11 @@ class MakeUserCommand extends Command
      */
     public function handle(CreateUserAction $action)
     {
-        $action->execute($this->argument('name'), $this->argument('login'), $this->argument('password'));
-        $this->info("Пользователь ".$this->argument('login')." успешно создан");
+        $name = 'Yi Long Musk';
+        $login = $this->ask('Введите логин админа');
+        $password = $this->ask('Введите пароль админа');
+
+        $action->execute($name, $login, $password);
+        $this->info("Пользователь ".$login." успешно создан");
     }
 }

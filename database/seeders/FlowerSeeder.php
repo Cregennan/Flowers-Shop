@@ -117,7 +117,7 @@ class FlowerSeeder extends Seeder
         foreach ($this->flowerbank as $name => $data){
             DB::table('flowers')->insert([
                 'name'=>$name,
-                'picture'=>'pictures/'.$data['picture'],
+                'picture'=>'/pictures/'.$data['picture'],
                 'description'=>$data['description'],
                 'price'=>$data['price']
             ]);

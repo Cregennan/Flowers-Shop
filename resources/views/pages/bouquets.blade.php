@@ -12,7 +12,7 @@
                 <div class="prod_det_box">
                     <div class="box_center">
                         <div class="prod_title">{{$bouquet->name}}</div>
-                        <p class="details">{{$bouquet->price}} рублей</p>
+                        <p class="details">{{$bouquet->price}} {{\App\Actions\MoneyConverter::Convert($bouquet->price)}}</p>
                         <div class="clear"></div>
                     </div>
                 </div>

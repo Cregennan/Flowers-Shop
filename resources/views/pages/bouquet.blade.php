@@ -14,7 +14,7 @@
         @foreach($bouquet->getFlowers() as $flowerdata)
             <p class="text-sm p-2 mt-1 border rounded-md"><a href="/flowers/{{$flowerdata->flower->id}}">{{$flowerdata->flower->name}}</a> -  {{$flowerdata->number}} шт.</p>
         @endforeach
-        <p class="text-xl mt-10">Цена: {{$bouquet->price}} рублей</p>
+        <p class="text-xl mt-10">Цена: {{$bouquet->price}} {{\App\Actions\MoneyConverter::Convert($bouquet->price)}}</p>
 
         @auth
             <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>

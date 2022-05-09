@@ -14,7 +14,7 @@
             <div class="box_center">
                 <div class="prod_title">{{$flower->name}}</div>
                 <p class="details">{{$flower->description}}</p>
-                <div class="price"><strong>ЦЕНА:</strong> <span class="red">{{$flower->price}} рублей</span></div>
+                <div class="price"><strong>ЦЕНА:</strong> <span class="red">{{$flower->price}} {{\App\Actions\MoneyConverter::Convert($flower->price)}}</span></div>
                 <div class="clear"></div>
             </div>
             <div class="box_bottom"></div>

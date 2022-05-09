@@ -8,7 +8,7 @@ class CreateUserAction
     public function execute(string $name, string $login, string $password){
         $user = new User([
             'name'=>$name,
-            'login'=>$login,
+            'username'=>$login,
             'password'=>Hash::make($password)
         ]);
         $user->save();

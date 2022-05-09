@@ -12,7 +12,7 @@
                 <a href="/flower/{{$flower->id}}">{{$flower->name}}</a>
                 <div class="new_prod_bg">
                     <a href="/flowers/{{$flower->id}}"><img src="{{$flower->picture}}" alt="" title="" class="thumb" border="0" /></a>
-                    <h> {{$flower->price}} рублей </h>
+                    <h> {{$flower->price}} {{\App\Actions\MoneyConverter::Convert($flower->price)}} </h>
                 </div>
             </div>
         @endforeach
